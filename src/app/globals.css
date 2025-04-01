@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('/fonts/MinecraftiaRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
+html{
+  scrollbar-gutter: stable;
+}
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  padding:3vw 2.5vw;
+  cursor: url("/mouse.svg"),auto;
+  font-family: 'Minecraftia',sans-serif;
 }
+.font-modal {
+  font-family: 'Space Grotesk', sans-serif;
+}
+/* a{ */
+  /* cursor: url("/mouse.svg"),auto;
+} */
+  
+  
