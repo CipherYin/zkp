@@ -3,24 +3,24 @@ import Image from "next/image"
 export const DashBoardPoint = () => {
     return (
         <div className="flex justify-between">
-        <div className="relative w-[30vw] aspect-[400/150]">
+        <div className="relative w-[44vw] 2xl:w-[30vw] aspect-[400/150]">
             <Image
                 src="/images/ui/frame.svg"
                 alt="frame"
                 fill
                 className="object-fill"
             />
-            <div className="absolute inset-0 flex flex-col justify-center mt-[1vw] px-[2vw] text-left">
-                <p className="text-[#64717B] text-[0.87vw] font-medium">
+            <div className="absolute inset-0 flex flex-col justify-center mt-[3vw] px-[4vw] 2xl:mt-[1vw] 2xl:px-[2vw] text-left">
+                <p className="text-[#64717B] text-[1.8vw] 2xl:text-[0.87vw] font-medium">
                 Total <span className="ml-[0.5vw]">Points</span>
                 </p>
-                <p className="text-black text-[1.8vw] font-medium mt-[0.5vw]">2000,000</p>
-                <p className="text-[#64717B] text-[0.7vw] pb-3 font-medium">
+                <p className="text-black text-[3.2vw] 2xl:text-[1.8vw] font-medium mt-[0.5vw]">2000,000</p>
+                <p className="text-[#64717B] text-[1.5vw] 2xl:text-[0.7vw] 2xl:pb-3 pb-4 font-medium">
                 Points are updated everyday
                 </p>
             </div>
         </div>
-        <div className="relative w-[30vw] aspect-[400/150]">
+        <div className="relative w-[44vw] 2xl:w-[30vw] aspect-[400/150]">
         
             <Image
                 src="/images/ui/frame.svg"
@@ -33,11 +33,11 @@ export const DashBoardPoint = () => {
                 alt="frame"
                 width={0}
                 height={0}
-                className="absolute -top-[12%] right-[3%] w-[6vw] z-10"
+                className="absolute -top-[12%] right-[3%] w-[8vw] 2xl:w-[6vw] z-10"
             />
             
-            <div className="absolute inset-0 flex flex-col justify-center mt-[1vw] px-[2vw] text-left">
-                <div className="flex text-[#64717B] text-[0.87vw] font-medium gap-[0.5vw]">
+            <div className="absolute inset-0 flex flex-col justify-center mt-[3vw] px-[4vw] 2xl:mt-[1vw] 2xl:px-[2vw] text-left">
+                <div className="flex text-[#64717B] text-[1.8vw] 2xl:text-[0.87vw] font-medium gap-[0.5vw]">
                     <span>Current</span>
                     <span>prize</span>
                     <span>pool</span>
@@ -52,9 +52,9 @@ export const DashBoardPoint = () => {
                         alt="frame"
                         width={0}
                         height={0}
-                        className="w-[12.5vw]"
+                        className="w-[22.5vw] 2xl:w-[12.5vw]"
                     />
-                       <div className="absolute w-[12.5vw] inset-0 flex items-center px-[0.7vw]">
+                       <div className="absolute w-[22.5vw] 2xl:w-[12.5vw] inset-0 flex items-center px-[0.7vw]">
                             <div
                             className="h-[60%] w-full overflow-hidden"
                             >
@@ -69,7 +69,7 @@ export const DashBoardPoint = () => {
                             </div>
                         </div>
                 </div>
-                <p className="text-black text-[0.7vw] pb-3 font-medium">
+                <p className="text-black text-[1.7vw] 2xl:text-[0.7vw] 2xl:pb-3 pb-4 font-medium">
                     2,300
                 </p>
             </div>

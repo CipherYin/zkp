@@ -11,7 +11,7 @@ const CustomScrollbar = ({ children, className = '' }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const thumbRef = useRef<HTMLDivElement>(null)
 
-  const [thumbHeight, setThumbHeight] = useState(40)
+  const [thumbHeight, setThumbHeight] = useState(10)
   const [thumbTop, setThumbTop] = useState(0)
 
   const updateThumb = () => {
@@ -36,7 +36,7 @@ const CustomScrollbar = ({ children, className = '' }: Props) => {
   }, [])
 
   return (
-    <div className={`relative h-full w-full ${className}`}>
+    <div className={`h-full w-full ${className}`}>
       <div
         ref={containerRef}
         className="h-full overflow-y-scroll pr-4"

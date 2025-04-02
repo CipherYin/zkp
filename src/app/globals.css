@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 html{
   scrollbar-gutter: stable;
 }
@@ -21,21 +27,11 @@ body {
 .font-modal {
   font-family: 'Space Grotesk', sans-serif;
 }
-/* a{ */
-  /* cursor: url("/mouse.svg"),auto;
-} */
-
-.bg-scroll-track {
-  background-image: url('/images/scroll-track.svg');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.font-china {
+  font-family: 'Clash Display', sans-serif;
 }
 
-.bg-scroll-thumb {
-  background-image: url('/images/scroll-thumb.svg');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
+
 
 tbody tr td:first-child {
   border-top-left-radius: 0.5vw;
@@ -47,4 +43,23 @@ tbody tr td:last-child {
   border-top-right-radius: 0.5vw;
   border-bottom-right-radius: 0.5vw;
  
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FFFBF7;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border-radius: 20px; 
+  border: 3px solid #FFFBF7; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #B0B0B0;
 }

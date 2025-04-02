@@ -1,5 +1,4 @@
 import Image from "next/image"
-import CustomScrollbar from "./component/custom-scrollbar"
 
   
 export const DashBoardLeaderBoard = () => {
@@ -23,48 +22,84 @@ export const DashBoardLeaderBoard = () => {
         { rank: 18, address: '0x10fa...2d22', points: '130,000' },
         { rank: 19, address: '0x10fa...2d22', points: '130,000' },
         { rank: 20, address: '0x10fa...2d22', points: '130,000' },
-        { rank: 21, address: '0x10fa...2d22', points: '130,000' },
+        { rank: 21, address: '0x10Ra...2d22', points: '130,000' },
         { rank: 220, address: '0x10fa...2d22', points: '130,000' },
       ]
     return (
         <div className="w-full">
-        <div className="text-[#FC8300] text-[1.3vw] mb-4">Leaderboard</div>
+        <div className="text-[#FC8300] text-[2.8vw] ml-2 2xl:text-[1.3vw] mb-4">Leaderboard</div>
       
-        <div className="pl-14 pt-2 pb-6 pr-10 border-[2px] rounded-2xl border-[#DDDDDD]">
-          <div className="text-[1vw] text-[#F1F1F1] font-minecraft">
-            <div className="relative h-[30vw]">
-              <CustomScrollbar>
-                <table className="w-full table-fixed border-separate border-spacing-y-2">
-                  <thead className="sticky top-0 z-10">
-                    <tr className="text-center bg-tutorialblue text-[#F1F1F1] text-base font-medium">
-                      <th className="w-[16.666%] py-3">Rank</th>
-                      <th className="w-[50%]">Address</th>
-                      <th className="w-[33.333%]">Points</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+        <div className="pl-6 2xl:pl-14 pb-4 pr-5 pt-4 border-[2px] rounded-2xl border-[#DDDDDD]">
+            <div className="overflow-y-scroll max-h-[88vw] 2xl:max-h-[38vw] pr-5">
+              <div className="text-[1vw] text-[#F1F1F1]">
+                <div className="relative">
+                  {/* 固定表头部分 */}
+                  <div className="grid grid-cols-[16.666%,50%,33.333%] sticky top-0 text-base bg-tutorialblue text-[#F1F1F1] z-10">
+                    <div className="text-center py-1 font-medium">Rank</div>
+                    <div className="text-center py-1 font-medium">Address</div>
+                    <div className="text-center py-1 font-medium">Points</div>
+                  </div>
+                  {/* 滚动的表格内容 */}
+                  <div className="grid gap-y-2">
                     {leaderboardData.map((row, i) => (
-                      <tr key={i} className=" text-black text-base text-center justify-center">
-                        <td className="bg-white pb-3 pt-6 flex items-center justify-center gap-2">
+                      <div key={i} className="grid grid-cols-[16.666%,50%,33.333%] pt-6 bg-white rounded-xl text-black text-center text-sm 2xl:text-base justify-center py-3">
+                        <div className="flex items-center justify-center gap-2">
                           <Image
                             src="/images/ui/verctor.svg"
                             alt="vector"
                             width={0}
                             height={0}
-                            className="w-[0.4vw] -mt-2"
+                            className="w-[0.7vw] 2xl:w-[0.4vw] -mt-3 2xl:-mt-2"
                           />
                           {row.rank}
-                        </td>
-                        <td className="truncate bg-white ">{row.address}</td>
-                        <td className="bg-white ">{row.points}</td>
-                      </tr>
+                        </div>
+                        <div>{row.address}</div>
+                        <div>{row.points}</div>
+                      </div>
                     ))}
-                  </tbody>
-                </table>
-              </CustomScrollbar>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>
+
+
+        {/* <div className="pl-14 pb-4 pr-5 pt-4 border-[2px] rounded-2xl border-[#DDDDDD] ">
+          <div className="overflow-y-scroll pr-5">
+            <div className="text-[1vw] text-[#F1F1F1]">
+              <div className="relative h-[38vw]">
+                  <table className="w-full table-fixed border-separate border-spacing-y-2 border-spacing-x-0">
+                    <thead className="sticky top-0 z-10">
+                      <tr className="text-center bg-tutorialblue  text-[#F1F1F1] text-base font-medium">
+                        <th className="w-[16.666%] border-none">Rank</th>
+                        <th className="w-[50%] border-none">Address</th>
+                        <th className="w-[33.333%] border-none">Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {leaderboardData.map((row, i) => (
+                        <tr key={i} className=" text-black text-base text-center justify-center">
+                          <td className="border-none bg-white pb-3 pt-6 flex items-center justify-center gap-2">
+                            <Image
+                              src="/images/ui/verctor.svg"
+                              alt="vector"
+                              width={0}
+                              height={0}
+                              className="w-[0.4vw] -mt-2"
+                            />
+                            {row.rank}
+                          </td>
+                          <td className="border-none pb-3 pt-6 truncate bg-white ">{row.address}</td>
+                          <td className="border-none pb-3 pt-6 bg-white ">{row.points}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+              </div>
             </div>
           </div>
-        </div>
+         
+        </div> */}
       </div>
       
     )

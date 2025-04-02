@@ -91,7 +91,7 @@ export default function Home() {
                   />
           </div>
 
-      <div className="w-full relative  aspect-[1000/600]  bg-tutorialblue">
+      <div className="w-full relative aspect-[15/25] 2xl:aspect-[1000/600]  bg-tutorialblue">
           <Image
               src="/images/map.png"
               alt="map"
@@ -180,8 +180,8 @@ export default function Home() {
                 title: <Image
                           src="/images/zerobase.svg"
                           alt="Zerobase"
-                          width={20}
-                          height={20}
+                          width={250}
+                          height={250}
                         />,
                 content: (
                   <>
