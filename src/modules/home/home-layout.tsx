@@ -52,7 +52,7 @@ export const HomeLayout = () => {
         ) : (
           <Link
              
-          href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${process.env.NEXT_PUBLIC_WEB_URL}/oauth/callback&state=randomstring`}
+          href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${window.location.origin}/oauth/callback&state=randomstring`}
           className="relative font-medium text-sm  2xl:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
         >
           <span>Connect galxe</span>
