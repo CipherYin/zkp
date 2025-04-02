@@ -24,5 +24,27 @@ body {
 /* a{ */
   /* cursor: url("/mouse.svg"),auto;
 } */
-  
-  
+
+.bg-scroll-track {
+  background-image: url('/images/scroll-track.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.bg-scroll-thumb {
+  background-image: url('/images/scroll-thumb.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+tbody tr td:first-child {
+  border-top-left-radius: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+ 
+}
+
+tbody tr td:last-child {
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+ 
+}
