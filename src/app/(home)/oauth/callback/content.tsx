@@ -15,6 +15,7 @@ export default function OAuthCallBack() {
         getAccessToken(code)
             .then((response) => {
             const accessToken = response.data.access_token;
+            console.log(accessToken)
             return getUserInfo(accessToken);
             })
             .then((response) => {

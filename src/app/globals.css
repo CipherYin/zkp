@@ -16,6 +16,9 @@
   font-weight: normal;
   font-style: normal;
 }
+.hover-float {
+  @apply transition-transform duration-200 hover:-translate-y-1 hover:scale-110;
+}
 html{
   scrollbar-gutter: stable;
 }

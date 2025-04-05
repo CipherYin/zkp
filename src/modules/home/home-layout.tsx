@@ -2,7 +2,6 @@
 import { useUserStore } from '@/store/userStore';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react';
 
 
 
@@ -10,7 +9,6 @@ export const HomeLayout = () => {
   const pathname = usePathname()
   const userInfo = useUserStore((state) => state.userInfo);
   const clearUserInfo = useUserStore((state) => state.clearUserInfo); 
-  const [origin, setOrigin] = useState<string | null>(null);
 
   const navItems = [
     { name: 'Tutorial', href: '/' },
@@ -21,11 +19,7 @@ export const HomeLayout = () => {
     clearUserInfo(); 
    
   };
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setOrigin(window.location.origin);
-    }
-  }, []);
+ 
   return (
     <nav className="flex justify-around space-x-12 py-4 pb-0 border-b border-grays text-sm">
       {navItems.map((item) => {
@@ -58,10 +52,10 @@ export const HomeLayout = () => {
         ) : (
           <Link
              
-          href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${origin}/oauth/callback&state=randomstring`}
+          href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${process.env.NEXT_PUBLIC_WEB_URL}/oauth/callback&state=randomstring`}
           className="relative font-medium text-sm  2xl:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
         >
-          <span>Connect galxe</span>
+          <span>Connect Galxe</span>
         </Link>  
       )
       }

@@ -98,7 +98,7 @@ export default function Home() {
               fill
               className="object-cover opacity-50"
             />
-             <div className="absolute top-[41.5%] left-[13%]">
+             {/* <div className="absolute top-[41.5%] left-[13%]">
               <button onClick={()=>{
               openModal({
                 title: <Image
@@ -171,24 +171,56 @@ export default function Home() {
               className="w-[1.5vw] h-auto transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
               />
               </button>
-          </div>
+          </div> */}
 
           <div className="absolute top-[54%] right-[21.2%]">
           <button 
               onClick={()=>{
               openModal({
-                title: <Image
-                          src="/images/zerobase.svg"
-                          alt="Zerobase"
-                          width={250}
-                          height={250}
-                        />,
+               
                 content: (
-                  <>
-                   <p>v0: We live in a world where every online transaction and piece of data is exposed to prying eyes, leading to identity theft, fraud, and the erosion of our most personal secrets</p>
-                    <p className="mt-12">v0: Our primary objective is to overcome existing limitations and make zero-knowledge cryptography accessible to everyone. We have already built the most competitive zero-knowledge prover network across speed, cost, security, and privacy. Next, we are expanding into use cases that were previously far beyond the borders of blockchain.</p>
-
-                  </>
+                  <div className="flex flex-col gap-8  font-medium">
+                    <div>
+                        <div className="flex gap-3 text-2xl mb-2">
+                          Join 
+                          <Image src="/zerobase.svg" width={0} height={0} alt="zerobase" className="w-[6vw]"/>
+                          in making history with an unprecedented 
+                          <Image src="/guinness.svg" width={0} height={0} alt="zerobase" className="w-[13vw]"/>
+                        </div>
+                        <div className="text-lg font-light">
+                          “Most contributions to a trusted setup for a Zero-Knowledge Proof (ZKP) in 2 month timeframe”
+                        </div>
+                    </div>
+                    <div>
+                        Supporters
+                        <div className="text-lg font-light mt-2">
+                          OKX Wallet, Hashkey Global, Galxe
+                        </div>
+                    </div>
+                   <div>
+                      Our Goals
+                      <div className="text-lg font-light mt-2">
+                        Establish a robust foundation for Gnark’s universal trusted setup.
+                      </div>
+                      <div className="text-lg font-light">
+                        Accelerate global adoption of Zero-Knowledge Proof (ZKP) technology.
+                      </div>
+                   </div>
+                    
+                    <div>
+                      Rewards
+                      <div className="text-lg font-light mt-2">
+                        A total prize pool of 15,000,000 ZB tokens.
+                      </div>
+                      <div className="text-lg font-light">
+                        Exclusive Prize pool from Hashkey Global and other supporters.
+                      </div>
+                      <div className="text-lg font-light">
+                        Exclusive Guinness World Record Participation Certificates for all contributors.
+                      </div>
+                    </div>
+                    
+                  </div>
                 )
               })
             }}>
