@@ -1,6 +1,6 @@
 'use client'
 import { useUserStore } from "@/store/userStore";
-import { getAccessToken, getUserInfo } from "@/util/axios";
+import { getAccessToken, getUserInfo, userLogin } from "@/util/axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -16,6 +16,8 @@ export default function OAuthCallBack() {
             .then((response) => {
             const accessToken = response.data.access_token;
             console.log(accessToken)
+            const userLoginResponse = userLogin(accessToken)
+            console.log(userLoginResponse)
             return getUserInfo(accessToken);
             })
             .then((response) => {

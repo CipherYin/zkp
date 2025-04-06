@@ -1,4 +1,5 @@
 'use client'
+import { cn } from '@/lib/utils';
 import { useUserStore } from '@/store/userStore';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -21,22 +22,24 @@ export const HomeLayout = () => {
   };
  
   return (
-    <nav className="flex justify-around space-x-12 py-4 pb-0 border-b border-grays text-sm">
+    <nav className="flex px-6 overflow-x-auto scrollbar-hide justify-around space-x-12 py-4 pb-0 border-b border-grays">
       {navItems.map((item) => {
         const isActive = pathname === item.href
         return (
             <Link
               key={item.name}
               href={item.href}
-              className="relative font-medium text-sm 2xl:text-lg px-2 2xl:px-10 pb-1 hover:text-blue-500 transition-colors"
+              className={cn(`relative  flex-shrink-0  font-medium text-[3vw] lg:text-[1.8vw] 2xl:text-lg px-2 lg:px-10 pb-1 hover:text-blue-500 transition-colors`,
+                  isActive ? 'border-b-purple border-b-2' : 'bg-transparent')
+              }
             >
               <span>{item.name}</span>
               
-              <span
-                className={`absolute left-0 -bottom-0.5 h-0.5 w-[100%] 2xl:w-[200%]  2xl:-translate-x-1/4 transition-all ${
+              {/* <span
+                className={`absolute left-0 -bottom-0.5 h-0.5 w-[100%] lg:w-[200%]  lg:-translate-x-1/4 transition-all ${
                   isActive ? 'bg-purple' : 'bg-transparent'
                 }`}
-              />
+              /> */}
             </Link>          
         )
       })}
@@ -44,7 +47,7 @@ export const HomeLayout = () => {
         {userInfo ? (
           <button
             onClick={handleLogout} 
-            className="relative font-medium text-sm  2xl:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
+            className="relative font-medium text-sm  lg:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
         >
           <span>LOGOUT</span>
         </button>         
@@ -53,7 +56,7 @@ export const HomeLayout = () => {
           <Link
              
           href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${process.env.NEXT_PUBLIC_WEB_URL}/oauth/callback&state=randomstring`}
-          className="relative font-medium text-sm  2xl:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
+          className="relative  flex-shrink-0 font-medium text-[3vw]  lg:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
         >
           <span>Connect Galxe</span>
         </Link>  

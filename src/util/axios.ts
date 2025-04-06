@@ -19,3 +19,12 @@ export function getUserInfo(accessToken: string) {
     },
   });
 }
+
+
+export function userLogin(token: string) {
+  return axios.get("https://zkp-api.zerobase.website/api/v1/user/login", {
+    params: {
+      access_token: token, 
+    },
+  });
+}

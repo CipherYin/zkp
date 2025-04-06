@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: 'Minecraftia';
   src: url('/fonts/MinecraftiaRegular.ttf') format('truetype');
@@ -26,6 +25,9 @@ body {
   padding:3vw 2.5vw;
   cursor: url("/mouse.svg"),auto;
   font-family: 'Minecraftia',sans-serif;
+  @media(max-width: 480px){
+    padding:10vw 5vw;
+  }
 }
 .font-modal {
   font-family: 'Space Grotesk', sans-serif;
@@ -50,6 +52,11 @@ tbody tr td:last-child {
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
+  @media(max-width: 1024px){
+    width: 0px;
+    height: 0px;
+  }
+
 }
 
 ::-webkit-scrollbar-track {
@@ -65,4 +72,13 @@ tbody tr td:last-child {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #B0B0B0;
+}
+
+
+.scrollbar-hide {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
