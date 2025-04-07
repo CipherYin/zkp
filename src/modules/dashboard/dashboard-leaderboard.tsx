@@ -30,7 +30,7 @@ export const DashBoardLeaderBoard = () => {
         <div className="text-[#FC8300] text-[3.8vw] ml-2 my-1 lg:text-[1.3vw] lg:mb-4">Leaderboard</div>
       
         <div className="pl-6 lg:pl-14 pb-4 pr-5 pt-4 border-[2px] rounded-lg border-[#DDDDDD]">
-            <div className="overflow-y-scroll max-h-[88vw] lg:max-h-[38vw] lg:pr-5">
+            <div className="overflow-y-scroll max-h-[120vw] lg:max-h-[38vw] lg:pr-5">
               <div className="text-[1vw] text-[#F1F1F1]">
                 <div className="relative">
                   <div className="grid grid-cols-[16.666%,50%,33.333%] sticky w-[101%] lg:w-full top-0 text-[2.5vw] lg:text-base bg-tutorialblue text-[#F1F1F1] z-50">

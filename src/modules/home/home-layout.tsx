@@ -29,7 +29,7 @@ export const HomeLayout = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={cn(`relative  flex-shrink-0  font-medium text-[3vw] lg:text-[1.8vw] 2xl:text-lg px-2 lg:px-10 pb-1 hover:text-blue-500 transition-colors`,
+              className={cn(`relative  flex-shrink-0  font-medium text-[3vw] md:text-[2vw] lg:text-[1.8vw] 2xl:text-[1vw] px-2 lg:px-10 pb-1 hover:text-blue-500 transition-colors`,
                   isActive ? 'border-b-purple border-b-2' : 'bg-transparent')
               }
             >
@@ -56,7 +56,7 @@ export const HomeLayout = () => {
           <Link
              
           href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${process.env.NEXT_PUBLIC_WEB_URL}/oauth/callback&state=randomstring`}
-          className="relative  flex-shrink-0 font-medium text-[3vw]  lg:text-lg px-10 pb-1 hover:text-blue-500 transition-colors"
+          className="relative  flex-shrink-0 font-medium text-[3vw] md:text-[2vw]  lg:text-[1.8vw] 2xl:text-[1vw] px-10 pb-1 hover:text-blue-500 transition-colors"
         >
           <span>Connect Galxe</span>
         </Link>  

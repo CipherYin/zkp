@@ -1,23 +1,28 @@
 'use client'
 import { useUserStore } from "@/store/userStore";
-import { getAccessToken, getUserInfo, userLogin } from "@/util/axios";
+import { getAccessToken, getUserInfo } from "@/util/axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function OAuthCallBack() {
     const searchParams = useSearchParams();
-    const code = searchParams.get("code");
+
+    const [code, setCode] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
     const setUserInfo = useUserStore((state) => state.setUserInfo); 
     const router = useRouter()
+    useEffect(() => {
+        const codeFromUrl = searchParams.get("code");
+        setCode(codeFromUrl);
+      }, [searchParams]);
     useEffect(() => {
         if (code) {
         getAccessToken(code)
             .then((response) => {
             const accessToken = response.data.access_token;
             console.log(accessToken)
-            const userLoginResponse = userLogin(accessToken)
-            console.log(userLoginResponse)
+            // const userLoginResponse = userLogin(accessToken)
+            // console.log(userLoginResponse)
             return getUserInfo(accessToken);
             })
             .then((response) => {

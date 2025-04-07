@@ -61,7 +61,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       {children}
       {visible && (
         <div
-          className={`absolute z-50 bg-white text-[#676767] text-[2vw] 2xl:text-[0.55vw] -mt-2 rounded-xl p-2 2xl:p-4 shadow-xl left-12 whitespace-nowrap transition-all duration-200`}
+          className={`absolute z-50 bg-white text-[#676767] text-[1vw] 2xl:text-[0.55vw] -mt-2 rounded-xl 2xl:p-4 shadow-xl left-12 whitespace-nowrap transition-all duration-200`}
         >
           {content}
         </div>

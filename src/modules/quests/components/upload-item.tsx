@@ -8,10 +8,20 @@ export default function UploadItem(){
 
     return (
        <div className='flex bg-[#D9D9D9] rounded-xl'>
-              <div className="flex bg-[#FFFBF7] rounded-xl py-8 px-3 lg:p-12 shadow-lg gap-14 w-full">
-                   <div className="-mr-10">
-                       <Image src='/images/quests/image.svg' alt="icon" width={0} height={0}  className='w-[24vw] lg:w-[14vw]  2xl:w-[8vw]'/>
-                   </div>
+              <div className="flex bg-[#FFFBF7] rounded-xl py-8 px-3 lg:p-12 shadow-lg gap-2 2xl:gap-6 w-full">
+              <div className="relative w-[19vw] h-[30vw] 2xl:w-[8.5vw] 2xl:h-[12vw] overflow-hidden rounded-xl">
+                    <Image
+                        src="/images/quests/upload-img.jpeg"
+                        alt="icon"
+                        fill
+                        className="object-cover object-center" 
+                    />
+                    </div>
+
+
+                   {/* <div className="-mr-10 bg-black">
+                       <Image src='/images/quests/upload-img.jpeg' alt="icon" width={10} height={40}  className='object-cover lg:w-[14vw]  2xl:w-[8vw]'/>
+                   </div> */}
        
                    <div className="flex-1 flex flex-col justify-between h-full">
                         <div className="flex flex-col">
