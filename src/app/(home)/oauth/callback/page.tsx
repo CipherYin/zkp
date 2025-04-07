@@ -1,3 +1,4 @@
+"use client"
 import { Suspense } from "react";
 import OAuthCallBack from "./content";
 

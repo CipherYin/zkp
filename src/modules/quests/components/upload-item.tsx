@@ -1,11 +1,22 @@
 'use client'
 import Tooltip from "@/components/ui/tooltip";
 import Image from "next/image";
+import { useRef } from "react";
 import useMedia from "use-media";
 
 export default function UploadItem(){
     const isSmallDevice = useMedia({ maxWidth: '768px' });
-
+    const fileInputRef = useRef<HTMLInputElement | null>(null)
+    const handleClick = () => {
+        fileInputRef.current?.click()
+      }
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0]
+        if (file) {
+          console.log('选中的文件:', file)
+    
+        }
+    }
     return (
        <div className='flex bg-[#D9D9D9] rounded-xl'>
               <div className="flex bg-[#FFFBF7] rounded-xl py-8 px-3 lg:p-12 shadow-lg gap-2 2xl:gap-6 w-full">
@@ -38,8 +49,15 @@ export default function UploadItem(){
                        {
                         !isSmallDevice&&(
                             <div className='flex justify-end gap-16 rounded-xl items-center'>
-                            <button className="">
+                            <button onClick={handleClick}>
                                 <Image src='/images/quests/button-upload.svg' width={0} height={0} alt='upload' className='w-[24vw] lg:w-[8vw]  2xl:w-[7vw] hover-float'/>
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    ref={fileInputRef}
+                                    className="hidden"
+                                    onChange={handleFileChange}
+                                />
                             </button>
                             <div className='flex gap-4'>
                                 <Image src="/images/quests/button-x.svg" width={0} height={0} alt='upload' className='2xl:w-[1.5vw] lg:w-[2vw] hover-float'/>

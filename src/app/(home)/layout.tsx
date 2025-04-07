@@ -1,3 +1,4 @@
+"use client"
 import { HomeFooter } from "@/modules/home/home-footer";
 import { HomeLayout } from "@/modules/home/home-layout";
 

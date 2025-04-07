@@ -1,3 +1,5 @@
+"use client"
+
 import QuestsItem from "@/modules/quests/quests-item";
 
 

@@ -191,46 +191,46 @@ export default function Home() {
                   <div className="flex flex-col  gap-4 lg:gap-6 2xl:gap-8  font-medium">
                     <div>
                     {/* Join                         in making history with an unprecedented  */}
-                        <div className="flex flex-wrap text-[3.5vw]  sm:text-[2.5vw] lg:text-[1.6vw] gap-1 2xl:text-2xl lg:mb-2 leading-none mt-3">
+                        <div className="flex flex-wrap text-[3.5vw]  sm:text-[2.5vw] lg:text-[1.2vw] gap-1 2xl:text-2xl lg:mb-2 leading-none mt-3">
                           Join
-                          <Image src="/zerobase.svg" width={0} height={0} alt="zerobase" className="w-[17vw] sm:w-[13vw] lg:w-[7vw] 2xl:w-[6vw]"/>
+                          <Image src="/zerobase.svg" width={0} height={0} alt="zerobase" className="w-[17vw] sm:w-[13vw] lg:w-[6vw] 2xl:w-[6vw]"/>
                             <span className="whitespace-nowrap">in</span> 
                             <span className="whitespace-nowrap"> making</span>
                             <span className="whitespace-nowrap"> history </span>
                             <span className="whitespace-nowrap">with</span>
                             <span className="whitespace-nowrap">an</span>
                            <span className="whitespace-nowrap">unprecedented</span>
-                          <Image src="/guinness.svg" width={0} height={0} alt="zerobase" className="w-[33vw] sm:w-[28vw] lg:w-[16vw] 2xl:w-[13vw]"/>
+                          <Image src="/guinness.svg" width={0} height={0} alt="zerobase" className="w-[33vw] sm:w-[28vw] lg:w-[14vw] 2xl:w-[13vw]"/>
                         </div>
-                        <div className="text-[3vw] sm:text-[2vw] sm:mt-4 lg:mt-0 lg:text-[1.3vw] 2xl:text-lg font-light break-keep leading-none mt-2">
+                        <div className="text-[3vw] sm:text-[2vw] sm:mt-4 lg:mt-0 lg:text-[1vw] 2xl:text-lg font-light break-keep leading-none mt-2">
                           “Most contributions to a trusted setup for a Zero-Knowledge Proof (ZKP) in 2 month timeframe”
                         </div>
                     </div>
-                    <div className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.6vw] 2xl:text-2xl">
+                    <div className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.2vw] 2xl:text-2xl">
                         Supporters
-                        <div className="text-[3vw] sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light leading-none">
+                        <div className="text-[3vw] sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light leading-none">
                           OKX Wallet, Hashkey Global, Galxe
                         </div>
                     </div>
-                   <div  className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.6vw] 2xl:text-2xl">
+                   <div  className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.2vw] 2xl:text-2xl">
                       Our Goals
-                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light break-keep leading-none">
+                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light break-keep leading-none">
                         Establish a robust foundation for Gnark’s universal trusted setup.
                       </div>
-                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light mt-2 break-keep leading-none">
+                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light mt-2 break-keep leading-none">
                         Accelerate global adoption of Zero-Knowledge Proof (ZKP) technology.
                       </div>
                    </div>
                     
-                    <div  className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.6vw] 2xl:text-2xl">
+                    <div  className="text-[3.5vw] sm:text-[2.5vw] lg:text-[1.2vw] 2xl:text-2xl">
                       Rewards
-                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light break-keep leading-none">
+                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light break-keep leading-none">
                         A total prize pool of 15,000,000 ZB tokens.
                       </div>
-                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light  sm:mt-4 lg:mt-2 mt-2  break-keep leading-none">
+                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light  sm:mt-4 lg:mt-2 mt-2  break-keep leading-none">
                         Exclusive Prize pool from Hashkey Global and other supporters.
                       </div>
-                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1.3vw] 2xl:text-lg font-light  sm:mt-4 lg:mt-2  mt-2 break-keep leading-none">
+                      <div className="text-[3vw]  sm:text-[2vw] lg:text-[1vw] 2xl:text-lg font-light  sm:mt-4 lg:mt-2  mt-2 break-keep leading-none">
                         Exclusive Guinness World Record Participation Certificates for all contributors.
                       </div>
                     </div>
