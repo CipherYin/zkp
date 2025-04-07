@@ -36,7 +36,7 @@ export const DashBoardPoint = () => {
                 className="absolute -top-[12%] right-[3%] w-[8vw] lg:w-[6vw] z-10"
             />
             
-            <div className="absolute inset-0 flex flex-col justify-center mt-[1vw] sm:mt-[0.2vw] px-[4vw] lg:mt-0 lg:px-[2vw] text-left">
+            <div className="absolute inset-0 flex flex-col justify-center mt-[5vw] sm:mt-[3vw] px-[4vw] lg:mt-[1vw] lg:px-[2vw] text-left">
                 <div className="flex text-[#64717B] text-[1.6vw] lg:text-[0.87vw] font-medium gap-[0.5vw]">
                     <span>Current</span>
                     <span>prize</span>
@@ -69,9 +69,9 @@ export const DashBoardPoint = () => {
                             </div>
                         </div>
                 </div>
-                {/* <p className="text-black text-[1.5vw] lg:text-[0.7vw] lg:pb-3 pb-4 font-medium">
+                <p className="text-white text-[1.5vw] lg:text-[0.7vw] lg:pb-3 pb-4 font-medium">
                     2,300
-                </p> */}
+                </p>
             </div>
         </div>
     </div>
