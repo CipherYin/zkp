@@ -56,7 +56,7 @@ const Page = () => {
     // ];
   
     return ( 
-      <div className="w-full  bg-tutorialblue rounded-3xl py-5 px-4 2xl:py-16 2xl:px-40">
+      <div className="w-full  bg-tutorialblue rounded-3xl py-5 px-4 lg:py-12 lg:px-16 2xl:py-16 2xl:px-40">
          
             <QuestsItem/>
       </div>
