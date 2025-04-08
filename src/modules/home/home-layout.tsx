@@ -1,9 +1,9 @@
 'use client'
+import { useGalxeAuthUrl } from '@/hooks/useGalxeAuthUrl';
 import { cn } from '@/lib/utils';
 import { useUserStore } from '@/store/userStore';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react';
 
 
 
@@ -13,13 +13,8 @@ export const HomeLayout = () => {
   const clearUserInfo = useUserStore((state) => state.clearGalxeUserInfo); 
   const clearZkpUserInfo = useUserStore((state) => state.clearZkpUserInfo); 
   const clearToken = useUserStore((state) => state.clearToken); 
+  const galxeUrl = useGalxeAuthUrl()
 
-  const [origin, setOrigin] = useState('')
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setOrigin(window.location.origin)
-    }
-  }, [])
   const navItems = [
     { name: 'Tutorial', href: '/' },
     { name: 'Dashboard', href: '/dashboard' },
@@ -63,9 +58,8 @@ export const HomeLayout = () => {
         </button>         
  
         ) : (
-          <Link
-             
-          href={`https://galxe.com/oauth?client_id=${process.env.NEXT_PUBLIC_CLIENT_ID}&scope=Email Twitter Discord Github EVMAddress SolanaAddress&redirect_uri=${origin}/oauth/callback&state=randomstring`}
+          <Link 
+          href={galxeUrl}
           className="relative  flex-shrink-0 font-medium text-[3vw] md:text-[2vw]  lg:text-[1.2vw] 2xl:text-[1vw] px-10 pb-1 hover:text-blue-500 transition-colors"
         >
           <span>Connect Galxe</span>

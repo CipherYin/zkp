@@ -27,20 +27,20 @@ export const DashBoardLeaderBoard = () => {
       ]
     return (
         <div className="w-full">
-        <div className="text-[#FC8300] text-[3.8vw] ml-2 my-1 lg:text-[1.3vw] lg:mb-4">Leaderboard</div>
+        <div className="text-[#FC8300] text-[3.8vw] ml-2 2xl:my-1 lg:text-[2vw] 2xl:text-[1.3vw] 2xl:mb-4">Leaderboard</div>
       
         <div className="pl-6 lg:pl-14 pb-4 pr-5 pt-4 border-[2px] rounded-lg border-[#DDDDDD]">
-            <div className="overflow-y-scroll max-h-[120vw] lg:max-h-[38vw] lg:pr-5">
+            <div className="overflow-y-scroll  overflow-x-hidden touch-pan-y max-h-[120vw] lg:max-h-[38vw] lg:pr-5">
               <div className="text-[1vw] text-[#F1F1F1]">
                 <div className="relative">
-                  <div className="grid grid-cols-[16.666%,50%,33.333%] sticky w-[101%] lg:w-full top-0 text-[2.5vw] lg:text-base bg-tutorialblue text-[#F1F1F1] z-50">
+                  <div className="grid grid-cols-[16.666%,50%,33.333%] sticky w-[101%] lg:w-full top-0 text-[2.5vw] lg:text-[1vw] 2xl:text-base bg-tutorialblue text-[#F1F1F1] z-50">
                     <div className="text-center py-1 font-medium">Rank</div>
                     <div className="text-center py-1 font-medium">Address</div>
                     <div className="text-center py-1 font-medium">Points</div>
                   </div>
                   <div className="grid gap-y-2 w-full">
                     {leaderboardData.map((row, i) => (
-                      <div key={i} className="grid grid-cols-[16.666%,50%,33.333%] pt-2 py-1 lg:pt-6 bg-white lg:rounded-xl rounded-lg text-black text-center text-[2vw] lg:text-base justify-center lg:py-3">
+                      <div key={i} className="grid grid-cols-[16.666%,50%,33.333%] pt-2 py-1 lg:pt-6 bg-white lg:rounded-xl rounded-lg text-black text-center text-[2vw] lg:text-[1vw] 2xl:text-base justify-center lg:py-3">
                         <div className="flex items-center justify-center gap-1">
                           <Image
                             src="/images/ui/verctor.svg"

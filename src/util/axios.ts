@@ -1,4 +1,5 @@
 import axios from "axios";
+import { compressImageTo15KB } from "./utils";
 
 export async function getAccessToken(code: string) {
   return axios.post(
@@ -50,7 +51,7 @@ export interface UserInfoResponse {
     staked_5000u: boolean;
     image: boolean;
     identity_code: string;
-  };
+  } |null;
 }
 
 export async function getUserProfile(token: string): Promise<UserInfoResponse> {
@@ -62,6 +63,20 @@ export async function getUserProfile(token: string): Promise<UserInfoResponse> {
       },
     }
   );
+
+  return res.data;
+}
+export async function uploadUserImage(file: File, token: string): Promise<UserInfoResponse> {
+  const compressedFile = await compressImageTo15KB(file)
+
+  const formData = new FormData();
+  formData.append("image", compressedFile);
+
+  const res = await axios.post<UserInfoResponse>("/api/api/v1/user/image", formData, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
   return res.data;
 }

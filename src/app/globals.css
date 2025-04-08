@@ -52,13 +52,16 @@ tbody tr td:last-child {
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
-  @media(max-width: 1024px){
-    width: 0px;
-    height: 0px;
-  }
+ 
 
 }
-
+@media(max-width: 768px){
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
 ::-webkit-scrollbar-track {
   background-color: #FFFBF7;
   border-radius: 20px;

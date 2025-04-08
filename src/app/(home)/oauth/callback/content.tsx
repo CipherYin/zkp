@@ -50,9 +50,9 @@ export default function OAuthCallBack() {
           
     }, [code]);
     return (
-        <div className="w-full h-[40vw] flex flex-col items-center justify-center text-center bg-tutorialblue rounded-3xl py-5 px-4 2xl:py-16 2xl:px-40">
-                {error && <p className="text-white text-3xl">{error}</p>}
-                {!error && <p className="text-white text-3xl">Loading...</p>}
+        <div className="w-full h-[130vw] sm:h-[90vw] md:h-[70vw]  2xl:h-[40vw] flex flex-col items-center justify-center text-center bg-tutorialblue rounded-3xl py-5 px-4 2xl:py-16 2xl:px-40">
+                {error && <p className="text-white text-[4vw] md:text-[2vw] 2xl:text-3xl">{error}</p>}
+                {!error && <p className="text-white text-[4vw] md:text-[2vw] 2xl:text-3xl">Loading...</p>}
                 
         </div>
 
